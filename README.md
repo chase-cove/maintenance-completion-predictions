@@ -14,9 +14,9 @@ Pandas is an open-source data manipulation and analysis library for Python, offe
 
 ![code_view_1](./img/code_view_1.png)
 
-### Dense layer:
+### Dense hidden layer:
 
-A Dense layer in a neural network connects each neuron to every neuron in the previous and next layers, performing a weighted sum on the inputs and applying an activation function.
+A Dense hidden layer in a neural network connects each neuron to every neuron in the previous and next layers, performing a weighted sum on the inputs and applying an activation function.
 
 ### ReLU:
 
