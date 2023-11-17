@@ -6,30 +6,27 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import symbol_database as _symbol_database
 from google.protobuf.internal import builder as _builder
+
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
 
 
-
-
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18prediction_service.proto\x12\nprediction\"\x0e\n\x0c\x45mptyRequest\" \n\rHelloResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"5\n\x0ePredictRequest\x12#\n\x05tasks\x18\x01 \x03(\x0b\x32\x14.prediction.TaskInfo\"-\n\x0fPredictResponse\x12\x1a\n\x12prediction_results\x18\x01 \x03(\x02\"\xc4\x01\n\x08TaskInfo\x12\x10\n\x08\x64ue_date\x18\x01 \x01(\t\x12\x17\n\x0f\x65stimated_hours\x18\x02 \x01(\x02\x12\x14\n\x0c\x63ompleted_on\x18\x03 \x01(\t\x12\x1b\n\x13\x63urrent_labor_hours\x18\x04 \x01(\x02\x12\x15\n\rcategory_name\x18\x05 \x01(\t\x12\x11\n\tsite_name\x18\x06 \x01(\t\x12\x12\n\ncreated_at\x18\x07 \x01(\t\x12\x1c\n\x14is_completed_on_time\x18\x08 \x01(\x08\x32\x99\x01\n\nPrediction\x12?\n\x08SayHello\x12\x18.prediction.EmptyRequest\x1a\x19.prediction.HelloResponse\x12J\n\x0fPredictMultiple\x12\x1a.prediction.PredictRequest\x1a\x1b.prediction.PredictResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
+    b'\n\x18prediction_service.proto\x12\nprediction"5\n\x0ePredictRequest\x12#\n\x05tasks\x18\x01 \x03(\x0b\x32\x14.prediction.TaskInfo"-\n\x0fPredictResponse\x12\x1a\n\x12prediction_results\x18\x01 \x03(\x02"\xc4\x01\n\x08TaskInfo\x12\x10\n\x08\x64ue_date\x18\x01 \x01(\t\x12\x17\n\x0f\x65stimated_hours\x18\x02 \x01(\x02\x12\x14\n\x0c\x63ompleted_on\x18\x03 \x01(\t\x12\x1b\n\x13\x63urrent_labor_hours\x18\x04 \x01(\x02\x12\x15\n\rcategory_name\x18\x05 \x01(\t\x12\x11\n\tsite_name\x18\x06 \x01(\t\x12\x12\n\ncreated_at\x18\x07 \x01(\t\x12\x1c\n\x14is_completed_on_time\x18\x08 \x01(\x08\x32X\n\nPrediction\x12J\n\x0fPredictMultiple\x12\x1a.prediction.PredictRequest\x1a\x1b.prediction.PredictResponseb\x06proto3'
+)
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'prediction_service_pb2', _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, "prediction_service_pb2", _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
-  DESCRIPTOR._options = None
-  _globals['_EMPTYREQUEST']._serialized_start=40
-  _globals['_EMPTYREQUEST']._serialized_end=54
-  _globals['_HELLORESPONSE']._serialized_start=56
-  _globals['_HELLORESPONSE']._serialized_end=88
-  _globals['_PREDICTREQUEST']._serialized_start=90
-  _globals['_PREDICTREQUEST']._serialized_end=143
-  _globals['_PREDICTRESPONSE']._serialized_start=145
-  _globals['_PREDICTRESPONSE']._serialized_end=190
-  _globals['_TASKINFO']._serialized_start=193
-  _globals['_TASKINFO']._serialized_end=389
-  _globals['_PREDICTION']._serialized_start=392
-  _globals['_PREDICTION']._serialized_end=545
+    DESCRIPTOR._options = None
+    _globals["_PREDICTREQUEST"]._serialized_start = 40
+    _globals["_PREDICTREQUEST"]._serialized_end = 93
+    _globals["_PREDICTRESPONSE"]._serialized_start = 95
+    _globals["_PREDICTRESPONSE"]._serialized_end = 140
+    _globals["_TASKINFO"]._serialized_start = 143
+    _globals["_TASKINFO"]._serialized_end = 339
+    _globals["_PREDICTION"]._serialized_start = 341
+    _globals["_PREDICTION"]._serialized_end = 429
 # @@protoc_insertion_point(module_scope)

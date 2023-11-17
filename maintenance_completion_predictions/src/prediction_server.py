@@ -9,9 +9,6 @@ from utils import make_prediction
 
 
 class Predictions(prediction_service_pb2_grpc.PredictionServicer):
-    def SayHello(self, request, context):
-        return prediction_service_pb2.HelloResponse(message="Hello here we are")
-
     def PredictMultiple(self, request, context):
         tasks_data = [
             {

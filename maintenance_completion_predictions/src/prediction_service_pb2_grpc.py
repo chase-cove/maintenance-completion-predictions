@@ -14,86 +14,66 @@ class PredictionStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.SayHello = channel.unary_unary(
-                '/prediction.Prediction/SayHello',
-                request_serializer=prediction__service__pb2.EmptyRequest.SerializeToString,
-                response_deserializer=prediction__service__pb2.HelloResponse.FromString,
-                )
         self.PredictMultiple = channel.unary_unary(
-                '/prediction.Prediction/PredictMultiple',
-                request_serializer=prediction__service__pb2.PredictRequest.SerializeToString,
-                response_deserializer=prediction__service__pb2.PredictResponse.FromString,
-                )
+            "/prediction.Prediction/PredictMultiple",
+            request_serializer=prediction__service__pb2.PredictRequest.SerializeToString,
+            response_deserializer=prediction__service__pb2.PredictResponse.FromString,
+        )
 
 
 class PredictionServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def SayHello(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def PredictMultiple(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_PredictionServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'SayHello': grpc.unary_unary_rpc_method_handler(
-                    servicer.SayHello,
-                    request_deserializer=prediction__service__pb2.EmptyRequest.FromString,
-                    response_serializer=prediction__service__pb2.HelloResponse.SerializeToString,
-            ),
-            'PredictMultiple': grpc.unary_unary_rpc_method_handler(
-                    servicer.PredictMultiple,
-                    request_deserializer=prediction__service__pb2.PredictRequest.FromString,
-                    response_serializer=prediction__service__pb2.PredictResponse.SerializeToString,
-            ),
+        "PredictMultiple": grpc.unary_unary_rpc_method_handler(
+            servicer.PredictMultiple,
+            request_deserializer=prediction__service__pb2.PredictRequest.FromString,
+            response_serializer=prediction__service__pb2.PredictResponse.SerializeToString,
+        ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'prediction.Prediction', rpc_method_handlers)
+        "prediction.Prediction", rpc_method_handlers
+    )
     server.add_generic_rpc_handlers((generic_handler,))
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Prediction(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def SayHello(request,
+    def PredictMultiple(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/prediction.Prediction/SayHello',
-            prediction__service__pb2.EmptyRequest.SerializeToString,
-            prediction__service__pb2.HelloResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def PredictMultiple(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/prediction.Prediction/PredictMultiple',
+            "/prediction.Prediction/PredictMultiple",
             prediction__service__pb2.PredictRequest.SerializeToString,
             prediction__service__pb2.PredictResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
