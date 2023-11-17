@@ -1,7 +1,6 @@
 import pandas as pd
 from tensorflow.keras.models import load_model
 
-from datetime import datetime
 import os
 
 
@@ -71,6 +70,7 @@ def transform_data(df):
             "createdAt",
             "siteName",
             "categoryName",
+            "hoursLeftToWork"
         ],
         axis=1,
     )
